@@ -1,0 +1,19 @@
+{
+    "webPort": "process.env.PORT",
+    "mongodbUrl": "process.env.MONGOHQ_URL",
+    "webToken": "process.env.AUTH_TOKEN",
+    "apn": {
+        "connection": {
+            "gateway": "gateway.sandbox.push.apple.com",
+            "cert": "process.env.APNS_CERT",
+            "key": "process.env.APNS_KEY"
+        },
+        "feedback": {
+            "address": "feedback.sandbox.push.apple.com",
+            "cert": "process.env.APNS_CERT",
+            "key": "process.env.APPNS_KEY",
+            "interval": 43200,
+            "batchFeedback": true
+        }
+    }
+}

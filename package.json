@@ -1,0 +1,23 @@
+{
+  "name": "ontherocks",
+  "version": "0.0.1",
+  "description": "Push server for jc4p/KeepItCool",
+  "keywords": [
+    "apn"
+  ],
+  "dependencies": {
+    "express": "~4.9.x",
+    "body-parser": "~1.13.3",
+    "apn": "~1.7.4"
+  },
+  "engines": {
+    "node": "0.12.2"
+  },
+  "scripts": {
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jc4p/ontherocks"
+  }
+}
