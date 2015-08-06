@@ -8,7 +8,8 @@
   "dependencies": {
     "express": "~4.9.x",
     "body-parser": "~1.13.3",
-    "apn": "~1.7.4"
+    "apn": "~1.7.4",
+    "lodash": "~3.0.0"
   },
   "engines": {
     "node": "0.12.2"

@@ -6,7 +6,6 @@ var apn = require('apn');
 var app = express();
 var apnConnection = new apn.Connection(config.get('apn').connection);
 
-
 app.set('port', (process.env.PORT || 5000));
 
 app.use(bodyParser.json());
