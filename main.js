@@ -32,11 +32,10 @@ app.post('/quarantine', function (req, res) {
     deviceToken = req.body.deviceToken;
     var device = new apn.Device(deviceToken);
 
-    var notification = new apn.Notification();
+    var notification = new apn.Notification({'quarantine': 1});
 
-    notification.payload = {'quarantine': 1};
-    notification.setPriority(5);
-    notification.setContentAvailable(1)
+    notification.priority = 5;;
+    notification.contentAvailable = 1;
     notification.sound = "";
 
     apnConnection.pushNotification(notification, device);
