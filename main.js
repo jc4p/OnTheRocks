@@ -1,10 +1,15 @@
-var config = require('nconf');
 var express = require('express');
 var bodyParser = require('body-parser');
 var apn = require('apn');
 
 var app = express();
-var apnConnection = apn.Connection(config.get('apn:connection'));
+
+apnConnectionSettings = {
+    "gateway": "gateway.sandbox.push.apple.com",
+    "cert": process.env.APNS_CERT,
+    "key": process.env.APNS_KEY
+}
+var apnConnection = apn.Connection(apnConnectionSettings);
 
 app.set('port', (process.env.PORT || 5000));
 
