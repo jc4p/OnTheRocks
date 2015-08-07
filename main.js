@@ -39,7 +39,7 @@ app.post('/quarantine', function (req, res) {
     notification.setContentAvailable(1)
     notification.sound = "";
 
-    apnConnection.pushNotification(note, device);
+    apnConnection.pushNotification(notification, device);
 
     res.send('');
 });
