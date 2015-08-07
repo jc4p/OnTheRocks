@@ -35,7 +35,7 @@ app.post('/quarantine', function (req, res) {
     var notification = new apn.Notification({'quarantine': 1});
 
     notification.priority = 5;;
-    notification.contentAvailable = 1;
+    notification.contentAvailable = true;
     notification.sound = "";
 
     apnConnection.pushNotification(notification, device);
