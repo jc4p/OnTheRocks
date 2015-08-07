@@ -1,1 +1,1 @@
-web: node main.js --config config.json
+web: node main.js

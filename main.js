@@ -1,15 +1,16 @@
-var config = require('./config');
+var config = require('nconf');
 var express = require('express');
 var bodyParser = require('body-parser');
 var apn = require('apn');
 
 var app = express();
-var apnConnection = new apn.Connection(config.get('apn').connection);
+var apnConnection = apn.Connection(config.get('apn:connection'));
 
 app.set('port', (process.env.PORT || 5000));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+config.file({ file: 'config.json' });
 
 app.use(function (req, res, next) {
     if (req.headers['x-auth-key'] !== config.get('webToken')) {
