@@ -1,7 +1,4 @@
 {
-    "webPort": "process.env.PORT",
-    "mongodbUrl": "process.env.MONGOHQ_URL",
-    "webToken": "process.env.AUTH_TOKEN",
     "apn": {
         "connection": {
             "gateway": "gateway.sandbox.push.apple.com",

@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 config.file({ file: 'config.json' });
 
 app.use(function (req, res, next) {
-    if (req.headers['x-auth-key'] !== config.get('webToken')) {
+    if (req.headers['x-auth-key'] !== process.env.AUTH_TOKEN) {
         res.status(401).send();
     } else {
         next();
