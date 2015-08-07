@@ -15,7 +15,6 @@ app.set('port', (process.env.PORT || 5000));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-config.file({ file: 'config.json' });
 
 app.use(function (req, res, next) {
     if (req.headers['x-auth-key'] !== process.env.AUTH_TOKEN) {
