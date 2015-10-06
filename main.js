@@ -36,6 +36,7 @@ app.post('/quarantine', function (req, res) {
 
     notification.priority = 5;
     notification.contentAvailable = true;
+    notification.alert = "Tap to enable blacklist"
 
     apnConnection.pushNotification(notification, device);
 
